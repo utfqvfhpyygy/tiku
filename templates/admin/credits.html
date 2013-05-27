@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<tal:block metal:use-macro="macro.html/head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content="乐研屋" />
+<meta name="Description" content="游戏教育 亲子活动 玩具城" />
+<meta name="robots" content="index, follow"/>
+<meta name="googlebot" content="index, follow"/>
+<title>乐研屋</title>
+</tal:block>
+
+<style type="text/css">
+
+
+</style>
+
+</head>
+<body>
+<div>
+
+<tal:block metal:use-macro="macro.html/nav">
+	<b>新用户注册</b> | <b>最新注册用户</b> | <b>回到首页</b> |  <b><a href="?action=loginout">退出</a></b>
+	<hr />	
+</tal:block>
+
+
+<tal:block metal:use-macro="macro.html/userNav">
+	<b>新用户注册</b> | <b>最新注册用户</b> | <b>回到首页</b> |  <b><a href="?action=loginout">退出</a></b>
+	<hr />	
+</tal:block>
+
+
+<table border="1">
+	<tr>
+		<th colspan="2" align="center">答题结果</th>
+	</tr>	
+
+	<tr>
+		<td>用户学号：</td><td><b><font color="red">${uid}</font></b></td>
+	</tr>
+	<tr>
+		<td>用户名称：</td><td>${info/name}</td>
+	</tr>
+	<tr>
+		<td>回答结果：</td><td>${result}</td>
+	</tr>
+	<tr>
+		<td>获得积分：</td><td><b>${info/credits}</b></td>
+	</tr>
+
+</table>
+</div>
+</body>
+</html>
+

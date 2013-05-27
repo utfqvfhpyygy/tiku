@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<tal:block metal:use-macro="macro.html/head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content="乐研屋" />
+<meta name="Description" content="游戏教育 亲子活动 玩具城" />
+<meta name="robots" content="index, follow"/>
+<meta name="googlebot" content="index, follow"/>
+<title>乐研屋</title>
+</tal:block>
+<style type="text/css">
+	#submit {font-size: 20px};
+</style>
+<script type="text/javascript" src="templates/common/jquery.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+
+	$("#credits").focus();
+
+});
+
+
+function submits()
+{
+	if ( $("#reason").val() == 0)
+	{
+		alert("no choice");
+		return false;
+	}
+}
+
+</script>
+</head>
+<body>
+<div>
+
+<tal:block metal:use-macro="macro.html/nav">
+	<b>新用户注册</b> | <b>最新注册用户</b> | <b>回到首页</b> |  <b><a href="?action=loginout">退出</a></b>
+	<hr />	
+</tal:block>
+
+
+<tal:block metal:use-macro="macro.html/userNav">
+	<b>新用户注册</b> | <b>最新注册用户</b> | <b>回到首页</b> |  <b><a href="?action=loginout">退出</a></b>
+	<hr />	
+</tal:block>
+
+<form method='post' action='?action=credits&sub=getCreditsSave' onsubmit="return submits();">
+<table style="border-collapse:collapse;border-color:#333333" cellpadding="7px" cellspacing="2px" border="1px" > 
+	<tr>
+		<td>获得多少积分？</td>
+		<td>
+			<input type='hidden' name='uid' value="${uid}" />
+
+			<input type='text' name='credits' size="30px" id="credits"/>
+
+		</td>
+		<td>
+			<select name="type" id="reason">
+				<option value="0">未选择</option>
+				<option value="1">购买商品</option>
+				<option value="2">邀请好友</option>
+				<option value="3">系统赠送</option>
+				<option value="4">其他原因</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="3"><input type='submit' value="确 定" style="width:100px;height:100px" id="submit"/></th>
+	</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+

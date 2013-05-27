@@ -1,0 +1,26 @@
+<tal:block metal:define-macro="nav">
+	<b><a href="?action=signupUser">>>新用户注册</a></b> | <b><a href="?action=listUser">>最新注册用户</a></b> | <b><a href="?action=admin">>>登录学员</a></b> |  <b><a href="?action=loginout">>>退出</a></b>
+	<hr />
+</tal:block>
+
+<tal:block metal:define-macro="userNav">
+	<hr />
+	<hr />
+	<h3>用户操作界面（当前学号：${uid}）</h3> 
+	<hr />
+	<b><a href="?action=tiku&uid=${uid}">>>参加答题</a></b> | <b><a href="?action=credits&sub=give">>>转让积分</a></b> | <b><a href="?action=credits&sub=get">>>获得积分</a></b> |  <b><a href="?action=loginout">>>开通VIP</a>
+		| <b>>><a href="?action=findUser&uid=${uid}">学员信息</a></b>
+	</b>
+	<hr />
+	<hr />
+</tal:block>
+
+
+<tal:block metal:define-macro="head">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="Keywords" content="乐研屋" />
+	<meta name="Description" content="游戏教育 亲子活动 玩具城" />
+	<meta name="robots" content="index, follow"/>
+	<meta name="googlebot" content="index, follow"/>
+	<title>乐研屋</title>
+</tal:block>

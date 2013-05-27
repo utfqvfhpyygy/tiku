@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<tal:block metal:use-macro="macro.html/head">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="Keywords" content="乐研屋" />
+<meta name="Description" content="游戏教育 亲子活动 玩具城" />
+<meta name="robots" content="index, follow"/>
+<meta name="googlebot" content="index, follow"/>
+<title>乐研屋</title>
+</tal:block>
+
+</head>
+<body>
+<div>
+
+<tal:block metal:use-macro="macro.html/nav">
+	<b>新用户注册</b> | <b>最新注册用户</b> | <b>回到首页</b> |  <b><a href="?action=loginout">退出</a></b>
+	<hr />	
+</tal:block>
+
+
+<tal:block metal:use-macro="macro.html/userNav">
+	<b>新用户注册</b> | <b>最新注册用户</b> | <b>回到首页</b> |  <b><a href="?action=loginout">退出</a></b>
+	<hr />	
+</tal:block>
+
+<form method='post' action='?action=tiku&sub=saveTikuResult'>
+<table style="border-collapse:collapse;border-color:#333333" cellpadding="7px" cellspacing="2px" border="1px">
+	<tr>
+		<td>题目编号:</td>
+		<td>
+			${tiku/tid}
+		</td>
+	</tr>
+
+	<tr>
+		<td>参赛学员</td>
+		<td>
+			${user/name}
+		</td>
+	</tr>
+	<tr>
+		<td>成绩：</td>
+		<td> <input type='radio' name='result' value="1" />合格   <input type='radio' name='result' value="0" />不合格  
+		</td>
+	</tr>	
+	<tr>
+		<td></td><td>
+		<input type="hidden" name="tid" value="${tiku/tid}" />
+		<input type='submit' value="确定" style="height=20px;width=100px;" /></td>
+	</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
+
